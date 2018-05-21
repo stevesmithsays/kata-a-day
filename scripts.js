@@ -105,5 +105,16 @@ return reversedStr;
 const reverse = (s) => {
   return s.split(' ').reverse().join(' ');
 }
-
 //  *****************************
+
+// Task
+// Given an integral number, determine if it's a square number:
+// CODE HERE
+
+const isSquare = (num) => {
+  return num >= 0 && Math.sqrt(num) % 1 === 0;
+}
+
+const isSquare = (n) => n >= 0 && Math.sqrt(n) % 1 === 0;
+// ******************************
+
