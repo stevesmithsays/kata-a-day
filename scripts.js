@@ -59,6 +59,7 @@ const addBinary = (a, b) => {let c = a+b; return (c >>> 0).toString(2)}
 
 // Given an array of integers, remove the smallest value. Do not mutate the original array/list. If there are multiple elements with the same value, remove the one with a lower index. If you get an empty array/list, return an empty array/list.
 // Don't change the order of the elements that are left.
+// CODE HERE
 
 const removeSmallest = (numbers) => {
   if (!(numbers.length)) {
@@ -81,3 +82,28 @@ const removeSmallest = (numbers) => {
 
 // removeSmallest([1,2,3,4,5]) = [2,3,4,5]
 // ***************************
+
+// You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
+
+// CODE HERE
+
+// went the long way first :)
+let whaStr = "well this is a great string"
+
+const reverse = (str) => {
+  let reversedStr = ''
+  let newArr = str.split(' ');
+  newArr.reverse();
+  return newArr.join(' ');
+  for(let i = 0; i<reversedStr.length; i ++){
+    reversedStr.concat(newArr[i]);
+ }
+return reversedStr;
+}
+
+// refactored
+const reverse = (s) => {
+  return s.split(' ').reverse().join(' ');
+}
+
+//  *****************************
