@@ -118,3 +118,17 @@ const isSquare = (num) => {
 const isSquare = (n) => n >= 0 && Math.sqrt(n) % 1 === 0;
 // ******************************
 
+// Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
+// CODE HERE
+
+const capitals = (word) => {
+  let nuAr = []
+    for(let j = 0; j<word.length; j++){
+      if(word[j] == word[j].toUpperCase()){
+        nuAr.push(word.indexOf(word[j]));
+      }
+    }
+  return nuAr;
+}
+
+// ******************************
