@@ -84,10 +84,7 @@ const removeSmallest = (numbers) => {
 // ***************************
 
 // You need to write a function that reverses the words in a given string. A word can also fit an empty string. If this is not clear enough, here are some examples:
-
 // CODE HERE
-
-// went the long way first :)
 let whaStr = "well this is a great string"
 
 const reverse = (str) => {
@@ -105,9 +102,8 @@ return reversedStr;
 const reverse = (s) => {
   return s.split(' ').reverse().join(' ');
 }
-//  *****************************
 
-// Task
+//  *****************************
 // Given an integral number, determine if it's a square number:
 // CODE HERE
 
@@ -116,8 +112,8 @@ const isSquare = (num) => {
 }
 
 const isSquare = (n) => n >= 0 && Math.sqrt(n) % 1 === 0;
-// ******************************
 
+// ******************************
 // Write a function that takes a single string (word) as argument. The function must return an ordered list containing the indexes of all capital letters in the string.
 // CODE HERE
 
@@ -132,3 +128,60 @@ const capitals = (word) => {
 }
 
 // ******************************
+// Write a function that returns both the minimum and maximum number of the given list/array.
+// CODE HERE
+
+const minMax = (a) => {
+  let arr = [];
+  let mx = Math.max.apply(null, a);
+  let mn = Math.min.apply(null , a);
+  arr.push(mn, mx);
+  return arr;
+};
+
+// ******************************
+// Write a function to greet a person. Function will take name as input and greet the person by saying hello. Return null/nil if input is empty string or null/nil.
+// CODE HERE
+
+const greet = (name) => {
+  let greeting = "hello ";
+    if(name){
+      return greeting + name + "!";
+    }
+    else{
+      return null
+    };
+  }
+  
+// ******************************
+// There is an array with some numbers. All numbers are equal except for one. Try to find it!
+// CODE HERE
+
+  const findUniq = (arr) => {
+    return +arr.filter( (val) => {return arr.indexOf(val) == arr.lastIndexOf(val) } );
+  }
+
+// ******************************
+// Write a function that removes every lone 9 that is inbetween 7s.
+// CODE HERE
+
+  const sevenAte9 = (s) => s.replace(/79(?=7)/g, '7');
+
+// ******************************
+// Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 integers. No floats or empty arrays will be passed.
+// CODE HERE
+
+  const sumTwoSmallestNumbers = (n) => {
+    let nuArr = [];
+    n.map((nums) => {nuArr.push(nums)});
+    nuArr.sort((a,b) => {return a-b});
+    return nuArr[0] + nuArr[1];
+  }
+
+// ******************************
+
+
+
+
+
+  
