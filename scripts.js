@@ -157,8 +157,8 @@ const greet = (name) => {
 // There is an array with some numbers. All numbers are equal except for one. Try to find it!
 // CODE HERE
 
-  const findUniq = (arr) => {
-    return +arr.filter( (val) => {return arr.indexOf(val) == arr.lastIndexOf(val) } );
+  const findUniq = (a) => {
+    return +a.filter( (v) => {return a.indexOf(v) == a.lastIndexOf(v) } );
   }
 
 // ******************************
@@ -199,6 +199,28 @@ const findOdd = (a) => {
 }
 
 // ******************************
+
+// When given a string of space separated words, return the word with the longest length. If there are multiple words with the longest length, return the last instance of the word with the longest length.
+// CODE HERE
+
+const longestWord = (s) => {
+  let longest = s.split(' ').sort((a,b) => b.length >= a.length);
+  return longest[0]
+}
+
+
+// Write a function that returns both the minimum and maximum number of the given list/array.
+// CODE HERE
+const minMax = (a) => {
+  let arr = [];
+  let mx = Math.max.apply(null, a);
+  let mn = Math.min.apply(null , a);
+  arr.push(mn, mx);
+  return arr;
+}
+
+// ******************************
+
 
 
 
