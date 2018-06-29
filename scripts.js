@@ -179,8 +179,26 @@ const greet = (name) => {
   }
 
 // ******************************
+// Given an array, find the int that appears an odd number of times.
+// There will always be only one integer that appears an odd number of times.
+// CODE HERE
 
 
+const findOdd = (a) => { 
+  var count = 0;
+  for(var i = 0; i < a.length; i++) {
+    for(var j = 0; j < a.length; j++) {
+          if(a[i] == a[j]) {
+            count++;
+          }
+    }
+    if (count % 2 !== 0) {
+        return a[i];
+    }
+  }
+}
+
+// ******************************
 
 
 
