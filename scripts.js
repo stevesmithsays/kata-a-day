@@ -236,6 +236,20 @@ const isTriangle = (a,b,c) => a+b>c & a+c>b & b+c>a ? true : false;
 
 // ******************************
 
+// Remove the wubs from any song (string)
+// EXAMPLE: songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB") = WE ARE THE CHAMPIONS MY FRIEND
+// CODE HERE
+
+function songDecoder (str){
+  return str.replace(/(WUB)+/g, ' ').trim();
+} 
+
+const songDecoder = (s) => s.replace(/(WUB)+/g, ' ').trim();
+
+// ******************************
+
+
+
 
 
 
