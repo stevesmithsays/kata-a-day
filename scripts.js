@@ -248,7 +248,27 @@ const songDecoder = (s) => s.replace(/(WUB)+/g, ' ').trim();
 
 // ******************************
 
+// Return the number (count) of vowels in the given string.
+// We will consider a, e, i, o, and u as vowels for this Kata.
+// The input string will only consist of lower case letters and or spaces.
+// CODE HERE
 
+// const getCount = (str) => {
+//   let m = str.match(/[aeiou]/gi);
+//   if(m !== null){
+//     return m.length;
+//   }
+//     else
+//   {
+//     return 0;
+//   }
+// }
+const getCount = (s) => {
+  let m = s.match(/[aeiou]/gi);
+  return m === null ? 0 : m.length;
+}
+
+// ******************************
 
 
 
