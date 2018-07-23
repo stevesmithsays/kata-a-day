@@ -269,10 +269,51 @@ const getCount = (s) => {
 }
 
 // ******************************
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+// CODE HERE
 
+const sortByLength = (ar) => {
+  return ar.sort( (a, b) =>  a.length - b.length )
+}    
 
+// ******************************
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+// EXAMPLE = XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("ooxx") => true
+// XO("xooxx") => false
+// CODE HERE
 
+const XO = (s) => {
+  let xC = 0;
+  let oC = 0;
+  let newS = s.toLowerCase();
+    for(let i=0; i<newS.length; i++){
+    console.log(newS[i]);
+    if(newS[i] === "x"){
+      xC++;
+    }
+    if(newS[i] === "o"){
+      oC++;
+    }
+  }
+  if(xC === oC){
+    return true
+  }
+  else{ 
+    return false; 
+  }
+}
+// ******************************
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
+// EXAMPLE
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
 
+// CODE HERE
 
-  
+const solution = (s, e) => {
+  let need = e.split('')[0];
+  return s.endsWith(e) ? true : false;
+}
+// ******************************
